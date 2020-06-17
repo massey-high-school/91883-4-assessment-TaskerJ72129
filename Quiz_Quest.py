@@ -1,3 +1,9 @@
+def quiz_statement(statement, char):
+    print()
+    print(char*len(statement))
+    print(statement)
+    print(char*len(statement))
+
 import random
 # sets up loop
 
@@ -13,7 +19,7 @@ while keep_going == "":
 
     # stops game after user plays the amount of rounds they selected
     while rounds_played < rounds:
-        print("Round {}".format(rounds_played + 1))
+        round = quiz_statement("###  Round 1 of {}  ###".format(rounds), "#")
         print()
 
         # generates random numbers
@@ -28,11 +34,13 @@ while keep_going == "":
 
         # compares users guess to answer
         if user_answer == answer:
-            print("WOW! you got it right")
+            right = quiz_statement("(☞ﾟヮﾟ)☞ WOW! You got it right ☜(ﾟヮﾟ☜)   ", "*")
+            print()
             rounds_played += 1
             won += 1
         else:
-            print("WRONG!")
+            lose = quiz_statement("(╯°□°）╯︵ ┻━┻ WRONG! the answer was {} (╯°□°）╯︵ ┻━┻  ".format(answer), "-")
+            print()
             rounds_played += 1
             loss += 1
 

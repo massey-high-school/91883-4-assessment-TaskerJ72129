@@ -1,11 +1,10 @@
 import random
 
-
-high = int(input("high?"))
-rounds = int(input("How many rounds?  "))   # check with integer checker in due course
-rounds_played = 0
 keep_going = ""
 while keep_going == "":
+    high = int(input("high?"))
+    rounds = int(input("How many rounds?  "))  # check with integer checker in due course
+    rounds_played = 0
 
     while rounds_played < rounds:
         print("Round {}".format(rounds_played + 1))

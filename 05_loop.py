@@ -1,11 +1,9 @@
 import random
 
-
-high = int(input("high?"))
-
 keep_going = ""
 while keep_going == "":
 
+    high = int(input("high?"))
     one = random.randint(1, high)
     two = random.randint(1, high)
     answer = one + two

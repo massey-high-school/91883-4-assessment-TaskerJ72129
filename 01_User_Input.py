@@ -1,11 +1,9 @@
 def intcheck(question, low = None):
 
     # sets up error messages
-    if low is 0:
-        error = "Please enter an integer above 0"
-    else:
-        error = "Please enter an integer"
 
+    error = "Please enter an integer"
+    error2 = "please enter an integer above 0"
     while True:
 
         try:
@@ -14,13 +12,15 @@ def intcheck(question, low = None):
             if low is None:
                 print(error)
                 continue
-
+            elif low == 0:
+                print(error2)
             return response
 
         except ValueError:
             print(error)
             continue
 
+# Main routine
 # Main routine
 
 lowest = 0
