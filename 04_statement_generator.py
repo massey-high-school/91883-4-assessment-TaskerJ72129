@@ -17,4 +17,4 @@ print()
 start_round = quiz_statement("###  Round 1 of {}  ###".format(rounds), "#")
 # table flip
 print()
-lose = quiz_statement("(╯°□°）╯︵ ┻━┻ WRONG! the answer was {} (╯°□°）╯︵ ┻━┻  ".format(answer),   "-")
+lose = quiz_statement("(╯°□°）╯︵ ┻━┻ WRONG! the right answer was {} (╯°□°）╯︵ ┻━┻  ".format(answer),   "-")
