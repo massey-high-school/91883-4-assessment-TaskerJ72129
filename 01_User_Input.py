@@ -1,30 +1,20 @@
-def intcheck(question, low = None):
-
-    # sets up error messages
-
-    error = "Please enter an integer"
-    error2 = "please enter an integer above 0"
+def intcheck(question,low):
     while True:
-
         try:
             response = int(input(question))
-            # Checks response is not too low
-            if low is None:
-                print(error)
+            if response < low:
+                print("Please enter a whole number above 0")
                 continue
-            elif low == 0:
-                print(error2)
             return response
-
         except ValueError:
-            print(error)
-            continue
+            print("Please enter a whole number above 0")
 
 # Main routine
 # Main routine
 
 lowest = 0
-high = intcheck("High Number", lowest)
-rounds = intcheck("Rounds: ", lowest)
-user_answer = intcheck("Guess: ", lowest)
+high = intcheck("Highest Number:", 1)
+max = high*2
+rounds = intcheck("Rounds: ", 1)
+user_answer = intcheck("Guess: ",1)
 

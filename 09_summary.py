@@ -5,6 +5,9 @@ def quiz_statement(statement, char):
     print(char*len(statement))
 
 import random
+question_list = []
+user_answer_list = []
+answer_list = []
 # sets up loop
 
 keep_going = ""
@@ -29,6 +32,10 @@ while keep_going == "":
         answer = one + two
         user_answer = int(input("{} + {} = ".format(one,two)))
 
+        answer_list.append(answer)
+        question_list.append("{} + {} = ".format(one,two))
+        user_answer_list.append(user_answer)
+
         # compares users guess to answer
         if user_answer == answer:
             right = quiz_statement("(☞ﾟヮﾟ)☞ WOW! You got it right ☜(ﾟヮﾟ☜)   ", "*")
@@ -42,10 +49,18 @@ while keep_going == "":
             loss += 1
 
             # prints users score after each question
-        print("Right: {} \t | \t Lost: {}".format(won, loss))
+        print("Right: {} \t | \t Wrong: {}".format(won, loss))
+
+
+    sum_question = question_list[0:1]
+    sum_user_answer = user_answer_list[0:1]
+    sum_answer = answer_list[0:1]
+
+    print("Stats")
+    print("                  Users answer | Right answer | Right/Wrong")
+    print("Question 1: {} :  {}              {}             {}".format(sum_question ,user_answer_list[0:1] ,))
+
+    print("Thanks for playing")
 
     # loops game
     keep_going = input("Press <enter> to play again or any key to quit: ")
-
-# thanks user for playing
-print("Thanks for playing")

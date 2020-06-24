@@ -37,7 +37,7 @@ while keep_going == "":
             loss += 1
 
             # prints users score after each question
-        print("Won: {} \t | \t Lost: {}".format(won, loss))
+        print("Right: {} \t | \t Wrong: {}".format(won, loss))
 
     # loops game
     keep_going = input("Press <enter> to play again or any key to quit: ")
