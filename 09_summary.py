@@ -8,6 +8,7 @@ import random
 question_list = []
 user_answer_list = []
 answer_list = []
+righ_wrong_list = []
 # sets up loop
 
 keep_going = ""
@@ -42,22 +43,24 @@ while keep_going == "":
             print()
             rounds_played += 1
             won += 1
+            righ_wrong_list.append("right")
         else:
             lose = quiz_statement("(╯°□°）╯︵ ┻━┻ WRONG! the right answer was {} (╯°□°）╯︵ ┻━┻  ".format(answer), "-")
             print()
             rounds_played += 1
             loss += 1
-
+            righ_wrong_list.append("wrong")
             # prints users score after each question
         print("Right: {} \t | \t Wrong: {}".format(won, loss))
-    listcount = 0
+        sum_roundcount = 0
     print()
     print("***Results***")
     print()
-    print("                   user answer        right answer")
+    print("                   user answer        right answer           Right/Wrong")
+
     for item in question_list:
-        print("question: ",item," ", user_answer_list[listcount],"                 ", answer_list[listcount])
-        listcount += 1
+        print("question: ",item," ", user_answer_list[sum_roundcount],"                 ", answer_list[sum_roundcount],"                 ",righ_wrong_list[sum_roundcount])
+        sum_roundcount += 1
     print()
 
     # loops game
