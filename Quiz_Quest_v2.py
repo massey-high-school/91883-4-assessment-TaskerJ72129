@@ -21,12 +21,12 @@ def intcheck(question,low):
             print("Please enter a whole number above 0")
 
 print()
-print("welcome to quiz quest\n"
+print("Welcome to quiz quest.\n"
       "\n"
-      "this is an addition game\n"
-      "you can choose how hard you make it with what number you choose for high\n"
-      "you can also choose how many rounds you want to play\n"
-      "have fun")
+      "This is an addition game.\n"
+      "High is the maximum number each number in the question will go up to.\n"
+      "You can also choose how many rounds you want to play.\n"
+      "Have fun.")
 print()
 
 # loops game
