@@ -40,7 +40,9 @@ while keep_going == "":
     wrong_list = []
 
     # asks for the needed integers
+    print()
     high = intcheck("high?", 1)
+
     rounds = intcheck("How many rounds?  ", 1)
     rounds_played = 0
     won = 0
